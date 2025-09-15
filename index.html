@@ -1,269 +1,225 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bruno Moura — Executive Search for Technical and Leadership Roles</title>
-  <meta name="description" content="Executive Search Consultant focused on hard-to-fill technical talent and senior appointments since 2019. Candidate-first, evidence-based, discreet advisory." />
-  <link rel="canonical" href="https://bmoura-headhunter/homepage.github.io/" />
-
-  <!-- Preload critical -->
-  <link rel="preload" href="styles.css" as="style" />
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Icons -->
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180" />
-  <link rel="manifest" href="manifest.json" />
-
-  <!-- Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bruno Moura — Executive Search" />
-  <meta property="og:description" content="Executive Search for technical and leadership roles. Discreet, precise, and evidence-based since 2019." />
-  <meta property="og:image" content="assets/social-card.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bruno Moura — Executive Search" />
-  <meta name="twitter:description" content="Executive Search for technical and leadership roles. Discreet, precise, and evidence-based since 2019." />
-  <meta name="twitter:image" content="assets/social-card.png" />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Bruno Moura",
-    "jobTitle":"Executive Search Consultant",
-    "url":"https://your-username.github.io/",
-    "sameAs":["https://www.linkedin.com/in/bruno-moura-209832170/"],
-    "worksFor":{
-      "@type":"Organization",
-      "name":"Independent / Partnered with Global Partner HRS"
-    }
-  }
-  </script>
-
-  <!-- Inline critical CSS: layout shell + hero -->
+  <title>Bruno Moura — Headhunter</title>
+  <meta name="description" content="Headhunting for technical and leadership roles. Direct sourcing, structured assessment, and confidential advisory." />
+  <meta name="theme-color" content="#003366" />
   <style>
-    :root {
-      --bg: #0b0c0f; --text:#0f1222; --muted:#5b6073; --surface:#ffffff;
-      --brand:#0f5fff; --brand-2:#6ea8ff; --veil-1: rgba(99,119,255,.10); --veil-2: rgba(10,12,16,.0);
-      --radius: 14px; --shadow: 0 8px 24px rgba(0,0,0,.08);
-      --maxw: 1120px; --pad: clamp(16px, 2vw, 24px);
-      --h1: clamp(28px, 5vw, 46px); --h2: clamp(22px, 3.2vw, 30px); --lead: clamp(16px, 2vw, 18px);
-      color-scheme: light dark;
+    :root{
+      --primary:#003366;
+      --secondary:#0072ce;
+      --accent:#00a499;
+      --ink:#0f172a;
+      --ink-2:#334155;
+      --ink-3:#64748b;
+      --bg:#f1f5f9;
+      --card:#ffffff;
+      --card-2:#f8fafc;
+      --border:#e2e8f0;
     }
     @media (prefers-color-scheme: dark){
-      :root { --bg:#0b0c0f; --text:#e6e8ee; --muted:#a7aec0; --surface:#141722; --brand:#6ea8ff; --brand-2:#a8c7ff }
+      :root{
+        --ink:#e2e8f0;
+        --ink-2:#cbd5e1;
+        --ink-3:#94a3b8;
+        --bg:#0b1220;
+        --card:#0f172a;
+        --card-2:#111827;
+        --border:#1f2937;
+      }
     }
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.55}
-    a{color:var(--brand);text-decoration:none}
-    a:focus,button:focus,input:focus,textarea:focus{outline:2px solid var(--brand-2);outline-offset:2px}
-    .container{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
-    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip:focus{position:fixed;inset:auto auto auto var(--pad);width:auto;height:auto;background:var(--surface);color:var(--text);padding:8px 12px;border-radius:8px;z-index:999}
-    header{position:sticky;top:0;backdrop-filter:saturate(120%) blur(8px);background:linear-gradient(180deg, rgba(20,23,34,.78), rgba(20,23,34,.42)) ; border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px var(--pad)}
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif; color:var(--ink); background:var(--bg)}
+    a{color:var(--secondary); text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 24px}
+    header{position:sticky;top:0;z-index:10; backdrop-filter:saturate(120%) blur(6px); background:color-mix(in oklab, var(--card) 85%, transparent); border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
     .brand{display:flex;align-items:center;gap:10px}
-    .brand svg{width:28px;height:28px}
-    .menu{display:flex;gap:16px}
-    .menu a{color:var(--text);opacity:.9}
-    .cta{display:inline-block;background:var(--brand);color:white;padding:10px 14px;border-radius:10px;box-shadow:var(--shadow)}
-    .hero{position:relative;isolation:isolate}
-    .hero::before{
-      content:"";position:absolute;inset:-20vh 0 auto 0;height:70vh;z-index:-1;
-      background: linear-gradient(120deg, var(--veil-1), var(--veil-2) 60%), radial-gradient(1200px 400px at 20% 10%, rgba(110,168,255,.20), transparent 70%);
-      mask-image: radial-gradient(1200px 500px at 10% 0%, rgba(0,0,0,.9), transparent 70%);
-    }
-    .hero .wrap{padding:clamp(40px,8vw,96px) 0;display:grid;gap:18px}
-    h1{font-size:var(--h1);line-height:1.12;margin:0}
-    .lead{font-size:var(--lead);color:var(--muted);max-width:72ch}
-    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-    section{padding:56px 0}
+    .logo{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 210deg,var(--secondary),var(--primary));}
+    .menu{display:flex;gap:18px;font-size:14px}
+    .menu a{color:var(--ink)}
+    .menu a:hover{color:var(--secondary)}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid transparent;cursor:pointer;font-weight:600;font-size:14px;line-height:1.2}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{filter:brightness(.95)}
+    .btn-ghost{background:rgba(255,255,255,.12);color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.18)}
+    .btn-neutral{background:var(--card-2);color:var(--ink);border:1px solid var(--border)}
+    .btn-neutral:hover{background:color-mix(in oklab, var(--card-2) 85%, transparent)}
+
+    .hero{position:relative; color:#fff; background:linear-gradient(180deg,var(--primary),var(--secondary));}
+    .hero-inner{padding:80px 0}
+    .hero h1{font-size:clamp(32px,5vw,52px);line-height:1.1;margin:0 0 10px}
+    .hero p{max-width:760px;opacity:.9;font-size:18px;line-height:1.6;margin:0}
+    .hero-cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+
+    .section{padding:40px 0}
+    .section h2{margin:0 0 12px;font-size:26px;color:var(--primary)}
+    .muted{color:var(--ink-3)}
+
     .grid{display:grid;gap:16px}
-    .cards{grid-template-columns: repeat(auto-fit, minmax(240px,1fr))}
-    .card{background:var(--surface);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    @media (min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .card h3{margin:0 0 6px;font-size:18px;color:var(--secondary)}
+
+    .steps{counter-reset:step; list-style:none; padding-left:0; margin:0}
+    .steps .card{display:flex; flex-direction:column; height:100%}
+    .step h3{display:grid; grid-template-columns:28px 1fr; align-items:center; gap:8px; margin:0 0 10px; min-height:44px}
+    .step h3::before{counter-increment:step; content:counter(step); display:inline-grid; place-items:center; width:28px; height:28px; border-radius:8px; background:var(--secondary); color:#fff; font-size:14px}
+    .step p{margin:0}
+
+    footer{padding:30px 0;border-top:1px solid var(--border);color:var(--ink-3)}
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
-  <header role="banner">
-    <div class="nav container">
-      <a href="#home" class="brand" aria-label="Home">
-        <!-- Inline SVG wordmark -->
-        <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--brand)"/><stop offset="1" stop-color="var(--brand-2)"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#g)"/><text x="50%" y="54%" text-anchor="middle" fill="#fff" font-size="28" font-family="ui-sans-serif,system-ui" font-weight="700">BM</text></svg>
-        <strong>Bruno&nbsp;Moura</strong>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="logo" aria-hidden="true"></span>
+        <strong>Bruno Moura</strong>
+        <span class="muted" style="margin-left:6px">Headhunter</span>
       </a>
-      <nav aria-label="Primary">
-        <button id="navToggle" class="cta" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation"><span>Menu</span></button>
-        <div id="menu" class="menu" data-collapsible>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#mandates">Mandates</a>
-          <a href="#contact">Contact</a>
-        </div>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#roles">Open Roles</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="container wrap">
-        <h1>Executive Search for Technical and Leadership Roles</h1>
-        <p class="lead">Focused on hard-to-fill technical talent and senior appointments since 2019.</p>
-        <div class="btns">
-          <a class="cta" href="#contact">Contact Bruno</a>
-          <a class="cta" href="#services" aria-label="View Services">View Services</a>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Headhunting with structure and precision</h1>
+        <p>Direct sourcing, evidence‑based assessment, and confidential advisory. Focus on Engineering, Product, Data, Cloud, Security, and senior leadership. Retention > 90% at 12 months.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#roles">View roles</a>
+          <a class="btn btn-ghost" href="#services">Services</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
         </div>
       </div>
     </section>
 
-    <!-- Value pillars -->
-    <section aria-labelledby="pillars-title">
+    <!-- SERVICES -->
+    <section id="services" class="section">
       <div class="container">
-        <h2 id="pillars-title">Why clients choose this practice</h2>
-        <div class="grid cards" role="list">
-          <article class="card" role="listitem">
-            <h3>Technical Leadership Expertise</h3>
-            <p>Depth in IT and engineering talent markets applied to leadership hiring.</p>
-          </article>
-          <article class="card" role="listitem">
-            <h3>Strategic Precision</h3>
-            <p>Market mapping and structured assessment aligned to business outcomes.</p>
-          </article>
-          <article class="card" role="listitem">
-            <h3>Discreet & Trusted Advisory</h3>
-            <p>Confidential processes and clear stakeholder management.</p>
-          </article>
-          <article class="card" role="listitem">
-            <h3>Sustainable Impact</h3>
-            <p>Search tailored to role realities for durable placements.</p>
-          </article>
+        <h2>Services</h2>
+        <p class="muted">Confidential engagements. Executive reporting. Cultural alignment.</p>
+        <div class="grid grid-4" style="margin-top:14px">
+          <article class="card"><h3>Executive Search</h3><p class="muted">C‑level, VPs, Directors and critical roles. Retained or hybrid mandates.</p></article>
+          <article class="card"><h3>Technical Search</h3><p class="muted">Engineering, Product, Data, Cloud, Security. Direct sourcing for scarce talent.</p></article>
+          <article class="card"><h3>Market Mapping</h3><p class="muted">Competitive intel, target lists, compensation benchmarks, pipelines by geo/sector.</p></article>
+          <article class="card"><h3>Assessment & Advisory</h3><p class="muted">Scorecards, structured interviews, 360° references, offer & close support.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" aria-labelledby="about-title">
+    <!-- ROLES (Blank Template) -->
+    <section id="roles" class="section" aria-labelledby="roles-heading" style="background:var(--card-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
       <div class="container">
-        <h2 id="about-title">About</h2>
-        <div class="grid">
+        <h2 id="roles-heading">Open Roles</h2>
+        <div class="grid grid-2" style="margin-top:14px">
           <article class="card">
-            <p>I work in specialist and leadership recruitment, with experience spanning IT roles through to executive search mandates. Since 2019, I have participated in national and international searches, supporting clients in securing both critical technical talent and senior leadership appointments.</p>
-            <p>My background began in IT recruitment, focusing on direct search for complex and hard-to-fill roles. Over time, I became involved in leadership hiring, contributing to board-facing shortlists and supporting the defense of candidate recommendations. I have also worked as lead recruiter on a key international account, coordinating closely with a colleague and serving as a main point of contact for the client.</p>
-            <p>I take a candidate-first, evidence-based approach. Each search is tailored to the role’s strategic requirements and day-to-day realities. Clear communication, structured search methodology, and market insight guide my process, ensuring sustainable outcomes for both clients and candidates.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" aria-labelledby="services-title">
-      <div class="container">
-        <h2 id="services-title">Services</h2>
-        <div class="grid cards">
-          <article class="card">
-            <h3>Executive Search</h3>
-            <p>End-to-end mandates for senior leadership and critical hires.</p>
-          </article>
-          <article class="card">
-            <h3>Market Mapping</h3>
-            <p>Competitor and talent landscape analysis to inform hiring strategy.</p>
-          </article>
-          <article class="card">
-            <h3>Advisory</h3>
-            <p>Interview structure, scorecards, and stakeholder alignment support.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Mandates / Focus Areas -->
-    <section id="mandates" aria-labelledby="mandates-title">
-      <div class="container">
-        <h2 id="mandates-title">Selected Mandates & Focus Areas</h2>
-        <div class="grid cards">
-          <article class="card"><h3>Engineering Leadership</h3><p>EMs, Heads of Engineering, Directors.</p></article>
-          <article class="card"><h3>Architecture & Platforms</h3><p>Principal Engineers, Solution Architects.</p></article>
-          <article class="card"><h3>Security & GRC</h3><p>GRC leads, AppSec, Security Engineering.</p></article>
-          <article class="card"><h3>Data & Analytics</h3><p>Senior Data, Analytics, and ML leadership.</p></article>
-          <article class="card"><h3>Product & Delivery</h3><p>Senior PMs, Program, and Delivery leaders.</p></article>
-          <article class="card"><h3>Go-To-Market Tech</h3><p>Sales Engineering, Solutions, and Ops.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section aria-labelledby="process-title">
-      <div class="container">
-        <h2 id="process-title">Process</h2>
-        <ol class="grid cards" role="list">
-          <li class="card"><strong>Brief</strong><br />Role, context, and success profile.</li>
-          <li class="card"><strong>Market Map</strong><br />Targets, talent signals, outreach plan.</li>
-          <li class="card"><strong>Outreach & Assessment</strong><br />Structured interviews and scorecards.</li>
-          <li class="card"><strong>Shortlist & Stakeholder Alignment</strong><br />Board-ready documentation.</li>
-          <li class="card"><strong>Offer & Onboarding</strong><br />Closing and transition support.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Testimonials placeholders -->
-    <section aria-labelledby="testimonials-title">
-      <div class="container">
-        <h2 id="testimonials-title">Client Feedback</h2>
-        <div class="grid cards">
-          <blockquote class="card"><p>“Clear process and strong market insight. Shortlist hit the brief.”</p><cite>— VP Engineering, SaaS</cite></blockquote>
-          <blockquote class="card"><p>“Discreet, efficient, and consistent communication with the board.”</p><cite>— Managing Director, Consulting</cite></blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Contact</h2>
-        <div class="grid">
-          <article class="card">
-            <p>Email: <a href="mailto:contact@example.com">contact@example.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/bruno-moura-209832170/" rel="noopener">Profile</a></p>
-          </article>
-          <form class="card" id="contactForm" action="https://formspree.io/f/your-id" method="POST" aria-label="Contact form">
-            <!-- Replace action with your Formspree endpoint -->
-            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
-              <label>First name
-                <input name="firstName" type="text" required aria-required="true" />
-              </label>
-              <label>Last name
-                <input name="lastName" type="text" required aria-required="true" />
-              </label>
+            <h3>Role Title Here</h3>
+            <p class="muted">Company · Location</p>
+            <p class="muted">Brief description of the role and requirements.</p>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <a class="btn btn-primary" href="mailto:bmoura@globalpartner-hrs.pt?subject=Application%20—%20Role%20Title">Apply</a>
             </div>
-            <label>Email
-              <input name="email" type="email" required aria-required="true" inputmode="email" />
-            </label>
-            <label>Message
-              <textarea name="message" rows="5" required aria-required="true"></textarea>
-            </label>
-            <button class="cta" type="submit">Send</button>
-            <p id="formNote" class="lead" aria-live="polite"></p>
-          </form>
+          </article>
+          <article class="card">
+            <h3>Role Title Here</h3>
+            <p class="muted">Company · Location</p>
+            <p class="muted">Brief description of the role and requirements.</p>
+            <div style="margin-top:10px;display:flex;gap:8px">
+              <a class="btn btn-primary" href="mailto:bmoura@globalpartner-hrs.pt?subject=Application%20—%20Role%20Title">Apply</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section">
+      <div class="container">
+        <h2>Process</h2>
+        <div class="grid grid-5 steps" style="margin-top:14px">
+          <article class="card step">
+            <h3>Discovery</h3>
+            <p class="muted">Understand the role, company context, and success metrics.</p>
+          </article>
+          <article class="card step">
+            <h3>Strategy</h3>
+            <p class="muted">Define the ideal candidate profile, build Boolean searches, and identify target companies.</p>
+          </article>
+          <article class="card step">
+            <h3>Outreach</h3>
+            <p class="muted">Engage passive candidates with tailored, discreet messages.</p>
+          </article>
+          <article class="card step">
+            <h3>Evaluation</h3>
+            <p class="muted">Assess motivation, skills, and cultural fit through structured conversations.</p>
+          </article>
+          <article class="card step">
+            <h3>Placement</h3>
+            <p class="muted">Present a curated shortlist, support offer negotiation, and ensure smooth onboarding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" style="background:var(--card-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card" style="grid-column:span 2">
+            <h2>About</h2>
+            <p class="muted">Headhunter since 2019. Specialist in technical and leadership hires, operating with confidentiality, structure, and measurable outcomes. Bridging retained‑style rigor with boutique agility for Fortune 500s and high‑growth scale‑ups.</p>
+            <div class="grid grid-3" style="margin-top:12px">
+              <div class="card"><h3>90%+</h3><p class="muted">12‑month retention</p></div>
+              <div class="card"><h3>10–15</h3><p class="muted">days to shortlist</p></div>
+              <div class="card"><h3>Global</h3><p class="muted">mandates</p></div>
+            </div>
+          </div>
+          <aside class="card">
+            <h3 style="color:var(--secondary);margin:0 0 6px">Focus</h3>
+            <ul class="muted" style="padding-left:18px;margin:0">
+              <li>Engineering · Product · Data · Cloud · Security</li>
+              <li>Leadership: C‑level, VPs, Directors</li>
+              <li>Portugal‑based with international reach</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="card" style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Open to discuss mandates or map the market.</p>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+            <a class="btn btn-primary" href="mailto:bmoura@globalpartner-hrs.pt?subject=Headhunting%20Contact">Send Email</a>
+            <a class="btn btn-neutral" href="https://www.linkedin.com/in/bruno-moura-209832170/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="container" role="contentinfo" style="padding:36px 0">
-    <hr style="border:0;border-top:1px solid rgba(255,255,255,.12);margin-bottom:16px"/>
-    <p style="margin:0">© <span id="year"></span> Bruno Moura. Executive Search — Technical and Leadership talent.</p>
+  <footer>
+    <div class="container" id="footer-year">©  — Bruno Moura · Headhunter</div>
   </footer>
-
-  <script src="script.js" defer></script>
 </body>
 </html>
